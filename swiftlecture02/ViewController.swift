@@ -28,14 +28,14 @@ class ViewController: UIViewController {
             print("\( a ):\(b)")
         }
         let dicSorted = dic.sorted(by: { $0.key < $1.key})
+        
         for( a, b) in dicSorted {
             print("\( a ):\( b )")
         }
         var times : Int = 0
         Timer . scheduledTimer(withTimeInterval: 1.0,repeats: true, block: { smalltimer in
           times = times + 1
-            
-            print("timer :\(smalltimer.isValid)")
+            print("timer :\( smalltimer . isValid )")
         })
         _ = self.add(first: 1, second: 2)
     }
