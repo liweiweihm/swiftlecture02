@@ -24,17 +24,26 @@ class ViewController: UIViewController {
 //            print(str)
 //        }
         let dic = [ 1 : "A" , 2: "C" , 3 : "B" ]
-        for(a,b) int dic{
+        for(a,b) in dic{
             print("\( a ):\(b)")
         }
-        let dicSorted = dic.sorted(by: { $0.value<$1.value})
+        let dicSorted = dic.sorted(by: { $0.key < $1.key})
         for( a, b) in dicSorted {
-            print("\( a ):( b )")
+            print("\( a ):\( b )")
         }
-        
+        var times : Int = 0
+        Timer . scheduledTimer(withTimeInterval: 1.0,repeats: true, block: { smalltimer in
+          times = times + 1
+            
+            print("timer :\(smalltimer.isValid)")
+        })
+        _ = self.add(first: 1, second: 2)
     }
 
     override func didReceiveMemoryWarning() {
+        func add(first:Int, second:Int) -> Int {
+            return first + second
+        }
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
